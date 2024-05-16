@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туторіал</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../grid.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="../video/neon/Untitled.mov" type="video/mp4">
+    </video>  
+    <a href="../main.html">
+        <div class="arrow-back">
+            <i class="fa-solid fa-left-long icon"></i>
+            <span class="back-text">Назад</span>
+        </div>
+    </a>
+    <div class="page">
+        <aside class="left">
+            <div class="text">
+                <div class="space"></div>Створення ефектора для одягу в Blender включає налаштування об'єктів і параметрів, які впливатимуть на симуляцію тканини. Ось покрокове керівництво по створенню ефектора для одягу:
+
+                <br><span class="step">Крок 1:</span> Створення моделі одягу
+                Створіть або імпортуйте модель одягу:
+                
+                Додайте меш, який буде використовуватись як одяг. Ви можете створити просту плоску площину (Shift + A → Mesh → Plane) і потім надати їй форму одягу.
+                Застосуйте модифікатор Cloth до моделі одягу:
+                
+                Виберіть одяг.
+                Перейдіть у панель модифікаторів (іконка гайкового ключа у Properties Editor).
+                Додайте модифікатор "Cloth".
+                Налаштування параметрів Cloth:
+                
+                У властивостях модифікатора Cloth налаштуйте параметри:
+                Quality Steps: Збільште значення для покращення якості симуляції.
+                Mass: Встановіть масу тканини.
+                Structural Stiffness і Bending Stiffness: Налаштуйте жорсткість структури та вигину тканини для реалістичної поведінки.
+                <br><span class="step">Крок 2:</span> Створення ефектора
+                Створіть об'єкт, який буде ефектором:
+                
+                Додайте новий об'єкт (наприклад, сферу або куб), який буде служити ефектором (Shift + A → Mesh → UV Sphere).
+                Застосуйте модифікатор Collision до ефектора:
+                
+                Виберіть ефектор.
+                Перейдіть у панель модифікаторів.
+                Додайте модифікатор "Collision".
+                Налаштування параметрів Collision:
+                
+                У властивостях модифікатора Collision налаштуйте параметри:
+                Thickness Outer і Thickness Inner: Встановіть значення, щоб визначити межі колізії.
+                Friction: Налаштуйте тертя між одягом і ефектором.
+                <br><span class="step">Крок 3:</span> Застосування фізики до одягу
+                Закріпіть необхідні вершини:
+                Перейдіть у режим редагування одягу (Tab).
+                Виберіть вершини, які мають залишатися на місці (наприклад, на плечах або талії).
+                Натисніть Ctrl + G, щоб створити групу вершин, і назвіть її (наприклад, "Pinned").
+                Поверніться у об'єктний режим і у модифікаторі Cloth виберіть цю групу для опції "Pinning".
+                <br><span class="step">Крок 4:</span> Налаштування взаємодії одягу і ефектора
+                Налаштування взаємодії:
+                Переконайтеся, що ефектор і одяг знаходяться у правильних позиціях для симуляції.
+                За потреби, анімуйте ефектор, щоб він рухався і взаємодіяв з одягом (наприклад, можна анімувати руку персонажа, щоб вона торкалася одягу).
+                <br><span class="step">Крок 5:</span> Запуск симуляції
+                Запуск і перевірка симуляції:
+                Перейдіть до початку часової шкали.
+                Натисніть "Play" (Пробіл) для запуску симуляції.
+                Спостерігайте за поведінкою одягу і коригуйте параметри, якщо потрібно.
+                Додаткові поради
+                Використовуйте додаткові ефекти: Ви можете додати інші ефекти, такі як вітер, щоб посилити симуляцію. Для цього додайте об'єкт "Force Field" (Shift + A → Force Field → Wind) і налаштуйте його параметри.
+                Тестування і коригування: Симуляція одягу може вимагати багатьох тестів і коригувань параметрів для досягнення реалістичного результату. Не бійтеся експериментувати з налаштуваннями.
+                Висновок
+                Дотримуючись цих кроків, ви зможете створити ефектор для одягу в Blender, який буде взаємодіяти з тканиною і створювати реалістичні симуляції. Налаштування модифікаторів Cloth і Collision, а також правильне позиціонування і анімація ефектора допоможуть досягти потрібного результату.</div>
+        </aside>
+        <main>
+            <div class="center-ro">
+                <div class="border-div col-9">
+                    <img class="border"src="./video/border.png" alt="">
+                    <video class="video-player" width="100%" height="100%" controls>
+                        <source  src="./video/blend timelaps lower that 100mb.mov"" type="video/mp4">
+                    </video>
+                </div>
+                <div class="border-div col-9">
+                    <img class="border"src="./video/border.png" alt="">
+                    <video class="video-player" width="100%" height="100%" controls>
+                        <source src="./video/Untitled2.mov" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="border-div photo-four-quality col-9">
+                    <img class="border"src="./video/border.png" alt="">
+                    <img class="photo-four-quality" src="./video/untitled4k.png" alt="" width="100%" height="100%">
+                </div>
+                <div class="border-div col-9">
+                    <img class="border"src="./video/border.png" alt="">
+                    <video class="video-player" width="100%" height="100%" controls>
+                        <source src="./video/It's me.mov" type="video/mp4">
+                    </video>
+                </div>             
+            </div>
+        </main>
+
+    </div>
+    <script src=""></script>
+</body>
+</html>

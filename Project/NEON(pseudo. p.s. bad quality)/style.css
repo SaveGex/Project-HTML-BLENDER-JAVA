@@ -1,0 +1,174 @@
+:root{
+    --step-color-:  3px -1px 0px #ff0b0b, 1px 0px 20px rgb(0, 0, 0), 1px 0px 16px rgb(0, 0, 0);   
+
+    --size-step:  20px;
+    
+}
+body{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body >.background-video{
+    filter: blur(20px);
+
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Помещает видео за контент */
+}
+
+
+.page{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "l main"
+    "l main"
+}
+.page>main{
+    background-color: rgba(255, 228, 196, 0.308);
+    backdrop-filter: blur(2px);
+}
+
+main{
+    grid-area: main;
+}   
+.left{
+    z-index: 100;
+    grid-area:l;
+}   
+
+.icon{
+    transition: all .4s;
+}
+.arrow-back{
+
+    z-index: 1000;
+    width: 100px;
+    flex-direction: column;
+    font-size: 40px;
+    position: absolute;
+}
+.arrow-back > i{
+    color: rgb(0, 0, 0);
+
+}
+
+.arrow-back{
+    left: 20px;
+}
+.arrow-back:hover .back-text::after{
+    transform: translateX(-130px);
+    opacity: 0;
+}
+.arrow-back:hover .back-text{
+    transform: translateX(120px);
+    color: aqua;
+
+}
+.arrow-back:hover .icon{
+    color: aliceblue;
+}
+.back-text{
+    position: absolute;
+    top: 30px;
+    left: -130px;
+    transition: all .4s;
+}
+.back-text::after{
+    content: 'Назад';
+    opacity: 0.5;
+    position: absolute;
+    left: 120px;
+    transition: all .4s;
+}
+.text{
+    text-shadow: 3px -1px 0px #000000, 1px 0px 20px rgb(0, 0, 0), 1px 0px 16px rgb(255, 255, 255);   
+    color: rgb(255, 255, 255);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(245, 222, 179, 0.349);
+    font-size: 15px;
+
+    border: 2px white solid;
+    border-radius: 20px;
+}
+.space{
+    display: flex;
+    float: left;
+    width: 110px;
+    height: 50px;
+}
+.step{
+    text-shadow: var(--step-color-);
+    font-size: var(--size-step);
+    
+}
+.center-ro>video{
+    min-height: 200px;
+    max-height: 410px;
+}
+.center-ro{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    justify-content: center;
+}
+.image-me{
+    /* padding: 0px 21px 21px 0px; */
+    display: flex;
+}
+.border-div{
+    margin: auto;
+    margin-top: 50px;
+    /* display: flex; */
+    width: 710px;
+    height: 398px;
+    /* max-width: 80%; */
+    position: relative;
+    margin-bottom: 40px;
+
+}
+.border{
+    max-width: 80%;
+
+    left:  69px;
+    top: -29px;
+    transform: scale(1.41, 1);
+    width: 630px;
+    height: 455px;
+    z-index: -1;
+    position: absolute;
+}
+.photo-four-quality{
+    
+}
+@media screen and (max-width: 1200px) {
+    .photo-four-quality{
+        padding-top: 3.7px;
+    }
+    .border{
+        left: 39px;
+        top: -16px;
+        height: 255px;
+        transform: scale(1.42,1);
+        width: 600px;
+    }
+    .border-div{
+        width:400.5px;
+        height: 225px;
+    }
+
+}

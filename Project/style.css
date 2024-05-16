@@ -1,0 +1,107 @@
+body{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body >.background-video{
+    filter: blur(20px);
+
+}
+.content-for-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Помещает видео за контент */
+}
+.container{
+    backdrop-filter: blur(10px);
+}
+header{
+    margin: 100px;
+}
+
+#video1{
+    pointer-events: none;
+    height: 100%;
+    filter: blur(2px);
+    transition: all 0.4s;
+}
+/* video:hover{ */
+/* } */
+
+.content-for-text{
+    box-shadow: 3px -1px 20px 6px #ffffff, inset -2px -2px 20px 8px #944141, 0px 1px 2px #0027ff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px saddlebrown solid;
+    height: 1000px;
+}
+.text{
+    text-shadow: 3px -1px 0px #49acfe, 1px 0px 20px white, 1px 0px 16px rgb(255, 255, 255);   
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(245, 222, 179, 0.349);
+    font-size: 40px;
+    display: flex;
+    border: 2px white solid;
+    border-radius: 20px;
+}
+.content{
+    /* box-shadow: inset 0px 0px 10px 15px black;     */
+    margin-top: 20px;
+    display: flex;
+    height: 179px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px black solid;
+    z-index: 10;
+    
+}
+.content:hover{
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0);
+    border: 1px rgba(0, 0, 0, 0) solid;
+    overflow:visible;
+    /* backdrop-filter: opacity(100%); */
+}
+.video{
+    /* position: absolute; */
+    /* box-shadow: 0px 0px 10px red; */
+    /* border: 1px red solid; */
+    transition: transform .2s ease-in;
+    z-index: 100;
+
+}
+.content:hover .video{
+    transform: translate(420px, 200px);
+}
+
+.content:hover #video1{
+    filter: blur(0px);
+    transform: scale(3,3);
+}
+.text > a{
+    padding-top: 47px;
+    padding-right: 6px;
+}
+.just-for-more-space{
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+}
+sup{
+    filter: grayscale(100%);
+}
