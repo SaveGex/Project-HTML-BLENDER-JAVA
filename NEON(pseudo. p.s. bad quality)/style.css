@@ -153,6 +153,10 @@ main{
     position: absolute;
 }
 .photo-four-quality{
+    transition: all .4s;
+}
+.photo-four-quality-div:hover .photo-four-quality{
+    scale: 1.5;
     
 }
 @media screen and (max-width: 1200px) {
