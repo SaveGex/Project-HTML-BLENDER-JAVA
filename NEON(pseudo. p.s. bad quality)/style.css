@@ -28,6 +28,7 @@ body >.background-video{
 
 .page{
     min-height: 100vh;
+
     display: grid;
     grid-template-columns: 20% 1fr;
     gap: 10px;
@@ -46,6 +47,7 @@ main{
 .left{
     z-index: 100;
     grid-area:l;
+    justify-content: center;
 }   
 
 .icon{
@@ -159,7 +161,7 @@ main{
     scale: 1.5;
     
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     .photo-four-quality{
         padding-top: 3.7px;
     }
@@ -175,4 +177,24 @@ main{
         height: 225px;
     }
 
+}
+@media screen and (max-width:500px){
+    .border{
+        left: 29px;
+        top: -12px;
+        transform: scale(1.412,1);
+        height: 191px
+    }
+    .border-div{
+        width: 300px;
+        height:168px;
+    }
+}
+
+.small_main{
+    display: block;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "l"
+    "main"
 }

@@ -68,23 +68,27 @@ adjustVideoSettings();
 
 
 function adjustVideoSettings() {
-    let screen_width = document.documentElement.clientWidth;
-
+    let screen_width = window.innerWidth;
+    let content_for_text = document.getElementById("content-for-text");
     let tag_video = document.getElementById("video1");
     let div_col_12 = document.getElementById("remove_class");
-    let content = document.querySelector(".content")
+    let content = document.getElementById("content")
+    let content_for_text_width = content_for_text.offsetWidth;
+    if (screen_width < 1000) {
+        content.classList.remove("col-3");
 
-    if (screen_width <= 1000) {
         div_col_12.classList.remove("video");
         tag_video.setAttribute("type", "video/mp4")
 
-        content.style.width="500px"
+        content.style.width = content_for_text_width;
+        content.style.height =  content_for_text_width
         tag_video.classList.remove("play_video")
         tag_video.removeAttribute("muted")
         tag_video.setAttribute("controls",'')
 
-    } else {
-        content.style.width="calc(3*100%/12)";
+    } 
+    else if(screen_width>999) {
+        content.classList.add("col-3");
 
         // tag_video.setAttribute("type", "video/gif")
         div_col_12.classList.add("video");
@@ -98,4 +102,4 @@ function adjustVideoSettings() {
     }
 }
 
-// alert("Натисніть на відео щоб воно програлось ще раз")
+alert("Натисніть на відео щоб воно програлось ще раз")
