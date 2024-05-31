@@ -3,7 +3,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-body >.background-video{
+.block-1 >.background-video{
     filter: blur(20px);
 
 }
@@ -45,7 +45,7 @@ header{
     padding: 20px;
     border-radius: 20px;
     border: 2px saddlebrown solid;
-    height: 1000px;
+    /* height: 1000px; */
 }
 .text{
     text-shadow: 3px -1px 0px #49acfe, 1px 0px 20px white, 1px 0px 16px rgb(255, 255, 255);   
@@ -85,7 +85,7 @@ header{
 
 }
 .content:hover .video{
-    transform: translate(150%, 50%);
+    transform: translate(150%, 0%);
 }
 
 .content:hover .play_video{
