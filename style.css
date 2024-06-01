@@ -42,8 +42,8 @@ header{
 
 .content-for-text{
     box-shadow: 3px -1px 20px 6px #ffffff, inset -2px -2px 20px 8px #944141, 0px 1px 2px #0027ff;
-    padding: 20px;
-    border-radius: 20px;
+    /* padding: 0px;
+    border-radius: 0px; */
     border: 2px saddlebrown solid;
     /* height: 1000px; */
 }
@@ -119,7 +119,16 @@ sup{
         padding: 0;
     }
 }
-.asdfg{
+.block-1{
+    position: relative;
+    padding-top: 100px;
+}
+.video-with-alpha{
+    top: -35px;
+    left: 188px;
+    transform: scale(1.58,1.13);
+    max-width: 1500px;
+    max-height: 1200px;
     position: absolute;
-    z-index: 100;
+    z-index: 10;
 }

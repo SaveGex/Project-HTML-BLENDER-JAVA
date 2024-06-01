@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     window.addEventListener("resize", adjustVideoSettings);
     const content = document.getElementById("content");
     const video = document.getElementById("video1");
+    const alpha_video = document.getElementById("alpha_video");
+    alpha_video.playbackRate = 0.4;
     
     let visivle_element = document.getElementById("content");
     let play=false;
