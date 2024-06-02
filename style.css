@@ -7,11 +7,14 @@ body{
     filter: blur(20px);
 
 }
-.content-for-text {
+.mini-block{
     position: relative;
-    width: 100%;
-    height: 100%;
+}
+.content-for-text {
+    display: block;
+    height: auto;
     overflow: hidden;
+    
 }
 
 .background-video {
@@ -40,13 +43,14 @@ header{
 /* video:hover{ */
 /* } */
 
-.content-for-text{
-    box-shadow: 3px -1px 20px 6px #ffffff, inset -2px -2px 20px 8px #944141, 0px 1px 2px #0027ff;
-    /* padding: 0px;
-    border-radius: 0px; */
-    border: 2px saddlebrown solid;
-    /* height: 1000px; */
-}
+/* .content-for-text{
+    z-index: 10;
+    box-shadow: 3px -1px 20px 6px #ffffff, inset -2px -2px 20px 8px #944141, 0px 1px 2px #0027ff; */
+    /* padding: 20px; */
+    /* border-radius: 0px; */
+    /* border: 2px saddlebrown solid; */
+    /* height: 1000px;
+}  */
 .text{
     text-shadow: 3px -1px 0px #49acfe, 1px 0px 20px white, 1px 0px 16px rgb(255, 255, 255);   
     color: white;
@@ -54,20 +58,21 @@ header{
     padding: 20px;
     backdrop-filter: blur(4px);
     background-color: rgba(245, 222, 179, 0.349);
-    font-size: 30px;
+    /* font-size:; */
     display: flex;
     border: 2px white solid;
     border-radius: 20px;
 }
 .content{
-    /* box-shadow: inset 0px 0px 10px 15px black;     */
+    box-shadow: inset 0px 0px 10px 15px black;    
     margin-top: 20px;
     display: flex;
     height: auto;
     border-radius: 20px;
     overflow: hidden;
     border: 1px black solid;
-    z-index: 10;
+    z-index: 100;
+    position: relative;
     
 }
 .content:hover{
@@ -81,10 +86,11 @@ header{
     /* box-shadow: 0px 0px 10px red; */
     /* border: 1px red solid; */
     transition: transform .2s ease-in;
-    z-index: 100;
+    z-index: 1;
 
 }
 .content:hover .video{
+    
     transform: translate(150%, 0%);
 }
 
@@ -93,13 +99,15 @@ header{
     transform: scale(2.5,2.5);
 }
 .text > a{
-    padding-top: 47px;
+    z-index: 100;
+    padding-top: 27px;
     padding-right: 6px;
 }
 .just-for-more-space{
     margin-top: 20px;
 }
 a{
+
     text-decoration: none;
 }
 sup{
@@ -121,14 +129,40 @@ sup{
 }
 .block-1{
     position: relative;
-    padding-top: 100px;
+    padding-top: 87px;
 }
-.video-with-alpha{
-    top: -35px;
-    left: 188px;
-    transform: scale(1.58,1.13);
-    max-width: 1500px;
-    max-height: 1200px;
+.container-gpt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Чтобы не мешало остальным дивам */
+}
+
+.video-with-alpha {
+    top: -85px;
+    position: absolute;
+    box-sizing: border-box;
+    max-width: 100%;
+    /* max-height: 100%; */
+    width: auto;
+    height: auto;
     z-index: 10;
+}
+
+.other-content {
+    position: relative;
+    /* z-index: 1; */
+    pointer-events: auto;
 }

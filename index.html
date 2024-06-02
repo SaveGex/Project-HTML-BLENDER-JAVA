@@ -8,40 +8,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="block-1">
-        <video id="alpha_video" autoplay muted loop class="video-with-alpha">
-            <source src="./video/neon/0001-0200.webm"  type="video/webm">
-        </video>
+    <div class="container-gpt">
+        <div class="video-container">
+            <video id="video-container" class="video-with-alpha" autoplay muted loop>
+                <source src="./path/to/your/video_with_alpha.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="other-content">
+            <div class="block-1">
         
-        <video autoplay muted loop class="background-video">
-            <source src="./video/neon/Untitled.mov" type="video/mp4">
-        </video>
-        <div class="container">
-            <div class="row blur">
-                
-                <div id="content-for-text" class="content-for-text">
-                    <video autoplay muted loop class="background-video">
-                        <source src="./video/neon/Untitled.mov" type="video/mp4">
-                    </video>
-                    <div class="text col-12">
-                        <p>Псевдо неон. В мене був дуже обмежений час, навіт це рендерилось дуже довго. Тому результат міг би бути НА БАГАТО кращим якби було трохи більше часу.</p>
-                    </div>
-                    <div id="content" class="content col-3">
-                        <div id="remove_class" class="video col-12 ">
-        
-                            <video id="video1" class="play_video" src="./video/neon/NeonMe.mov" muted></video>
+                <video id="alpha_video" autoplay muted loop class="background-video">
+                    <source src="./video/neon/Untitled.mov" type="video/mp4">
+                </video>
+                <div id="mini-block" class="mini-block">
+                    <video id="alpha_video" autoplay muted loop class="video-with-alpha col-12">
+                            <source src="./video/neon/0001-0400.webm"  type="video/webm">
+                        </video>
+                    <div class="container">
+                        
+                        <div id="content-for-text" class="content-for-text">
+                    
+                    
+                            <video autoplay muted loop class="background-video">
+                                <source src="./video/neon/Untitled.mov" type="video/mp4">
+                            </video>
+                    
+                            <div class="text col-12">
+                                <p>Псевдо неон. В мене був дуже обмежений час, навіт це рендерилось дуже довго. Тому результат міг би бути НА БАГАТО кращим якби було трохи більше часу.</p>
+                            </div>
+                            <div id="content" class="content col-3">
+                                <div id="remove_class" class="video col-12 ">
+                                    <video id="video1" class="play_video" src="./video/neon/NeonMe.mov" muted></video>
+                                </div>
+                            </div>
+                            <div class="text just-for-more-space col-12">
+                                <a href="./NEON(pseudo. p.s. bad quality)/tutorial.html">Туторіал</a>
+                                <p> як зробити так само <sup>(якщо не полінюся покажу як зробити краще)</sup>.</p>
+                            </div>
                         </div>
-                    </div>
-        
-                    <div class="text row just-for-more-space col-12">
-                        <a href="./NEON(pseudo. p.s. bad quality)/tutorial.html">Туторіал</a>
-                        <p> як зробити так само <sup>(якщо не полінюся покажу як зробити краще)</sup>.</p>
+                    
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+
     <script src="./script.js"></script>
 </body>
 </html>

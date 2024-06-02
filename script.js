@@ -1,36 +1,50 @@
 document.addEventListener("DOMContentLoaded", () =>{
+    let mini_block = document.getElementById("mini-block");
+    let content_for_text = document.getElementById("content-for-text");
+    let content_for_text_height = content_for_text.offsetHeight;
+
+    mini_block.style.height = content_for_text_height + "px";
+
+    let mini_block_height = mini_block.offsetHeight;
+    let video_content = document.getElementById("video-container");
+    video_content.style.height = mini_block_height + "px";
+
     window.addEventListener("resize", adjustVideoSettings);
     const content = document.getElementById("content");
     const video = document.getElementById("video1");
     const alpha_video = document.getElementById("alpha_video");
     alpha_video.playbackRate = 0.4;
     
-    let visivle_element = document.getElementById("content");
     let play=false;
-    
 
+    
     content.addEventListener("mouseover",  () =>{
-    let screen_width = document.documentElement.clientWidth;
 
-        if(screen_width>1000){
-            visible();
-            if(!play){
-                video.play();
-                play = true;
+            let screen_width = document.documentElement.clientWidth;
+
+            if(screen_width>1000){
+                visible();
+                if(!play){
+                    video.play();
+                    play = true;
+                }
             }
-        }
-    
+        
     });
+    
     content.addEventListener("mouseleave", () =>{
         let screen_width = document.documentElement.clientWidth;
-        if(screen_width>1000){
-            if(play){
-                setTimeout(invisible, 300); 
+        let content = document.getElementById("content");
 
+        if(screen_width>1000){
+
+                setTimeout(invisible, 500); 
+                content.style.zIndex = "-1";
+                setTimeout(end_animation, 500);
                 video.pause();
                 video.currentTime=0;
                 play=false;
-            }
+            
         }
 
 
@@ -47,13 +61,18 @@ document.addEventListener("DOMContentLoaded", () =>{
     
 
 });
-
+function end_animation(){
+    content.style.zIndex = "10";
+}
 
 function invisible(){
     let visible_element = document.getElementById("content");
 
+
     visible_element.style.boxShadow = "inset 0px 0px 10px 15px black";
     visible_element.style.overflow = "hidden";
+
+
 };
 function visible(){
     let visible_element = document.getElementById("content");
@@ -74,11 +93,23 @@ function adjustVideoSettings() {
     let content_for_text = document.getElementById("content-for-text");
     let tag_video = document.getElementById("video1");
     let div_col_12 = document.getElementById("remove_class");
-    let content = document.getElementById("content")
+    let content = document.getElementById("content");
     let content_for_text_width = content_for_text.offsetWidth;
-    if (screen_width < 1000) {
-        content.classList.remove("col-3");
 
+    let mini_block = document.getElementById("mini-block");
+    // let content_for_text = document.getElementById("content-for-text");
+    let content_for_text_height = content_for_text.offsetHeight;
+
+    mini_block.style.height = content_for_text_height + "px";
+
+    let mini_block_height = mini_block.offsetHeight;
+    let video_content = document.getElementById("video-container");
+    
+    if (screen_width < 1000) {
+        let content_height = content.offsetHeight;
+        video_content.style.scale = "1, 1.5" ;
+
+        content.classList.remove("col-3");
         div_col_12.classList.remove("video");
         tag_video.setAttribute("type", "video/mp4")
 
@@ -91,7 +122,7 @@ function adjustVideoSettings() {
     } 
     else if(screen_width>999) {
         content.classList.add("col-3");
-
+        content.style.zIndex = "1";
         // tag_video.setAttribute("type", "video/gif")
         div_col_12.classList.add("video");
         tag_video.setAttribute("type", "video/mp4")
@@ -102,6 +133,7 @@ function adjustVideoSettings() {
         
 
     }
+
 }
 
 alert("Натисніть на відео щоб воно програлось ще раз")
