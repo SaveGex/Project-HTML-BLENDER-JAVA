@@ -4,6 +4,7 @@ body{
     background-size: cover;
 }
 body > .background-video{
+    height: 120%;
     filter: blur(20px);
 
 }
@@ -62,6 +63,8 @@ header{
     display: flex;
     border: 2px white solid;
     border-radius: 20px;
+    position: relative;
+    z-index: 10;
 }
 .content{
     box-shadow: inset 0px 0px 10px 15px black;    
@@ -115,9 +118,9 @@ sup{
 }
 
 @media screen and (max-width: 1000px) {
-    .text{
-        font-size: 20px;
-    }.text > a{
+    /* .text{
+        font-size: 20px; */
+    .text > a{
         padding-top: 24px;
         padding-right: 6px;
     }
@@ -182,11 +185,20 @@ sup{
 
 }
 .border{
-    top: -57px;
+    top: 0px;
 
-    transform: scale(1.478, 1);
+    transform: scale(1.478, 1.4);
     max-width: 100%;
 
     z-index: 1;
     position: absolute;
+}
+@media screen and (max-width: 1000px){
+    .border-div{
+        height: 663px;
+    }
+    .border{
+        top: 132px;
+        transform: scale(1.478, 2.32);
+    }
 }

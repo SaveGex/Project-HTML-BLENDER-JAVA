@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         if(screen_width>1000){
 
-                setTimeout(invisible, 500); 
+                setTimeout(invisible, 200); 
                 content.style.zIndex = "-1";
                 setTimeout(end_animation, 500);
                 video.pause();
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 });
 function end_animation(){
-    content.style.zIndex = "10";
+    content.style.zIndex = "100";
 }
 
 function invisible(){

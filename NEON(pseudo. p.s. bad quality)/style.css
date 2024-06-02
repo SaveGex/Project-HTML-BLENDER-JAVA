@@ -74,7 +74,7 @@ main{
     opacity: 0;
 }
 .arrow-back:hover .back-text{
-    transform: translateX(120px);
+    transform: translateX(200px);
     color: aqua;
 
 }
@@ -84,14 +84,14 @@ main{
 .back-text{
     position: absolute;
     top: 30px;
-    left: -130px;
+    left: -200px;
     transition: all .4s;
 }
 .back-text::after{
     content: 'Назад';
     opacity: 0.5;
     position: absolute;
-    left: 120px;
+    left: 200px;
     transition: all .4s;
 }
 .text{
