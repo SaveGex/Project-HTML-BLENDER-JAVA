@@ -88,12 +88,10 @@ function adjustVideoSettings() {
     let content = document.getElementById("content");
     let content_for_text_width = content_for_text.offsetWidth;
 
-    let mini_block = document.getElementById("mini-block");
     // let content_for_text = document.getElementById("content-for-text");
     let content_for_text_height = content_for_text.offsetHeight;
 
 
-    let mini_block_height = mini_block.offsetHeight;
     let video_content = document.getElementById("video-container");
     
     if (screen_width < 1000) {
