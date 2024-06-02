@@ -1,13 +1,5 @@
 document.addEventListener("DOMContentLoaded", () =>{
-    let mini_block = document.getElementById("mini-block");
-    let content_for_text = document.getElementById("content-for-text");
-    let content_for_text_height = content_for_text.offsetHeight;
 
-    mini_block.style.height = content_for_text_height + "px";
-
-    let mini_block_height = mini_block.offsetHeight;
-    let video_content = document.getElementById("video-container");
-    video_content.style.height = mini_block_height + "px";
 
     window.addEventListener("resize", adjustVideoSettings);
     const content = document.getElementById("content");
@@ -100,14 +92,12 @@ function adjustVideoSettings() {
     // let content_for_text = document.getElementById("content-for-text");
     let content_for_text_height = content_for_text.offsetHeight;
 
-    mini_block.style.height = content_for_text_height + "px";
 
     let mini_block_height = mini_block.offsetHeight;
     let video_content = document.getElementById("video-container");
     
     if (screen_width < 1000) {
         let content_height = content.offsetHeight;
-        video_content.style.scale = "1, 1.5" ;
 
         content.classList.remove("col-3");
         div_col_12.classList.remove("video");
@@ -121,6 +111,8 @@ function adjustVideoSettings() {
 
     } 
     else if(screen_width>999) {
+        video_content.style.scale = "1, 1.5" ;
+
         content.classList.add("col-3");
         content.style.zIndex = "1";
         // tag_video.setAttribute("type", "video/gif")

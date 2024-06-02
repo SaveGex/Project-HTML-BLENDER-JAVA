@@ -129,7 +129,7 @@ sup{
 }
 .block-1{
     position: relative;
-    padding-top: 87px;
+    margin-top: 87px;
 }
 .container-gpt {
     position: relative;
@@ -151,13 +151,16 @@ sup{
 }
 
 .video-with-alpha {
-    top: -85px;
+    transform: scale(1.029, 1);
+    margin-top: -79px;
+
+    /* top: -150px; */
     position: absolute;
     box-sizing: border-box;
+    width: 1200px;
     max-width: 100%;
     /* max-height: 100%; */
     width: auto;
-    height: auto;
     z-index: 10;
 }
 
