@@ -1,10 +1,6 @@
-html{
-    overflow-x: hidden;
-}
+
 body{
     max-height: 100%;
-    overflow:auto;
-    overflow-x: hidden;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,6 +131,15 @@ sup{
     .content-for-text{
         padding: 0;
     }
+}
+@media screen and (max-width: 710px){
+    #alpha_video{
+        position: absolute;
+        width: 100%;
+    }
+}
+@midia screen and (min-width: 1300px){
+    
 }
 /* .block-1{
     position: relative;
