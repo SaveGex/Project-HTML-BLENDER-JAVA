@@ -6,7 +6,7 @@ body{
     background-size: cover;
 }
 .block-1 > .background-video{
-    height: 200%;
+    height: 130%;
     filter: blur(20px);
 
 }
@@ -95,6 +95,7 @@ header{
 
 }
 .content:hover .video{
+    /* z-index: 100; */
     
     transform: translate(150%, 0%);
 }
@@ -186,8 +187,12 @@ sup{
     /* z-index: 1; 
     pointer-events: auto;
 } */
+.block-1{
+    max-width: 100%;
+    display: inline;
+}
 .border-div{
-
+    
     margin: auto;
     margin-top: 50px;
     /* display: flex; */
@@ -201,7 +206,7 @@ sup{
 .border{
     top: 0px;
 
-    transform: scale(1.478, 1.4);
+    transform: scale(1.475, 1.4);
     max-width: 100%;
 
     z-index: 1;
@@ -229,5 +234,37 @@ sup{
     }
 }
 .block-2{
+    /* border: 1px white solid;
+    backdrop-filter: blur(20px); */
+    margin-top: 250px;
     position: relative;
+}
+.border2{
+    left: 20px;
+    top: 0px;
+    max-width: 100%;
+    transform: scale(1.32, 1.4);
+
+    z-index: 1;
+    position: absolute;
+}
+.content_text{
+    padding: 10px, 20px,;
+    max-width: 100%;
+    display: flex;
+}
+.paragraph2{
+    line-height: 32px;
+    font-size: large;
+}
+.icon_pause{
+    color: wheat;
+    font-size: calc(12*100%/3);
+    position: fixed;
+    bottom: 30px;
+    right: 80px;
+}
+.icon_pause:hover{
+    cursor: pointer;
+    color: #49acfe;
 }

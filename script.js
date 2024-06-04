@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () =>{
     let video_container = document.getElementById("video-container2"); 
-    video_container.playbackRate = 0.4;
+    video_container.playbackRate = 0.6;
 
     window.addEventListener("resize", adjustVideoSettings);
     const content = document.getElementById("content");
@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             if(screen_width>1000){
                 visible();
                 if(!play){
+                    content.style.zIndex = "100";
+
                     video.play();
                     play = true;
                 }
@@ -90,13 +92,11 @@ function adjustVideoSettings() {
     let content_for_text_width = content_for_text.offsetWidth;
 
     // let content_for_text = document.getElementById("content-for-text");
-    let content_for_text_height = content_for_text.offsetHeight;
 
 
     let video_content = document.getElementById("video-container");
     
     if (screen_width < 1000) {
-        let content_height = content.offsetHeight;
 
         content.classList.remove("col-3");
         div_col_12.classList.remove("video");
@@ -126,5 +126,28 @@ function adjustVideoSettings() {
     }
 
 }
+
+let counter = 1;
+
+let icon_pause = document.getElementById("icon_pause");
+icon_pause.addEventListener("click", ()=>{
+    let videoElements = document.getElementsByTagName("video");
+
+    if(counter%2==1){
+        for(let i=0; i<videoElements.lenght; i++){
+            videoElements[i].pause();
+        }
+        counter++;    
+    }
+    else{
+        for(let i=0; i<videoElements.lenght; i++){
+            videoElements[i].play();
+        }
+
+        counter++;
+    }
+    console.log(counter);
+})
+
 
 alert("Натисніть на відео щоб воно програлось ще раз")
