@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () =>{
-
+    let video_container = document.getElementById("video-container2"); 
+    video_container.playbackRate = 0.4;
 
     window.addEventListener("resize", adjustVideoSettings);
     const content = document.getElementById("content");
