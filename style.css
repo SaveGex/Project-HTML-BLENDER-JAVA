@@ -5,8 +5,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-body > .background-video{
-    height: 120%;
+.block-1 > .background-video{
+    height: 200%;
     filter: blur(20px);
 
 }
@@ -98,14 +98,18 @@ header{
     
     transform: translate(150%, 0%);
 }
-
+.content:hover .text{
+    z-index: 1;
+}
 .content:hover .play_video{
     filter: blur(0px);
     transform: scale(2.5,2.5);
 }
-.text > a{
+p > a{
     z-index: 100;
-    padding-top: 27px;
+    display: flex;
+    align-items: center;
+    /* padding-top: 27px; */
     padding-right: 6px;
 }
 .just-for-more-space{
@@ -138,9 +142,7 @@ sup{
         width: 100%;
     }
 }
-@midia screen and (min-width: 1300px){
-    
-}
+
 /* .block-1{
     position: relative;
     padding:50px;
@@ -185,6 +187,7 @@ sup{
     pointer-events: auto;
 } */
 .border-div{
+
     margin: auto;
     margin-top: 50px;
     /* display: flex; */
@@ -214,5 +217,14 @@ sup{
     .border{
         top: 132px;
         transform: scale(1.478, 2.32);
+    }
+}
+@media screen and (min-width: 1400px){
+    .border-div{
+        width: 1100px;
+        height:620px;
+    }
+    .text{
+        font-size: 30px;
     }
 }
