@@ -374,5 +374,8 @@ sup{
     .text{
         font-size: 30px;
     }
-    
+    .border-div2{
+        width: 1100px;
+        height:620px;
+    }
 }
