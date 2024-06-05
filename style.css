@@ -6,6 +6,7 @@ body{
     background-size: cover;
 }
 .block-1 > .background-video{
+    max-width: 100%;
     height: 130%;
     filter: blur(20px);
 
@@ -33,9 +34,7 @@ body{
 .container{
     backdrop-filter: blur(10px);
 }
-header{
-    margin: 100px;
-}
+
 
 .play_video{
     pointer-events: none;
@@ -58,16 +57,17 @@ header{
     text-shadow: 3px -1px 0px #49acfe, 1px 0px 20px white, 1px 0px 16px rgb(255, 255, 255);   
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 20px;
+    padding: 10px 20px;
     backdrop-filter: blur(4px);
     background-color: rgba(245, 222, 179, 0.349);
-    /* font-size:; */
+    font-size: 25px;
     display: flex;
     border: 2px white solid;
     border-radius: 20px;
     position: relative;
     z-index: 10;
 }
+
 .content{
     box-shadow: inset 0px 0px 10px 15px black;    
     margin-top: 20px;
@@ -106,9 +106,9 @@ header{
     filter: blur(0px);
     transform: scale(2.5,2.5);
 }
-p > a{
+.tutorial{
     z-index: 100;
-    display: flex;
+    display: inline;
     align-items: center;
     /* padding-top: 27px; */
     padding-right: 6px;
@@ -124,25 +124,7 @@ sup{
     filter: grayscale(100%);
 }
 
-@media screen and (max-width: 1000px) {
-    /* .text{
-        font-size: 20px; */
-    .text > a{
-        padding-top: 24px;
-        padding-right: 6px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .content-for-text{
-        padding: 0;
-    }
-}
-@media screen and (max-width: 710px){
-    #alpha_video{
-        position: absolute;
-        width: 100%;
-    }
-}
+
 
 /* .block-1{
     position: relative;
@@ -187,10 +169,7 @@ sup{
     /* z-index: 1; 
     pointer-events: auto;
 } */
-.block-1{
-    max-width: 100%;
-    display: inline;
-}
+
 .border-div{
     
     margin: auto;
@@ -201,8 +180,19 @@ sup{
     /* max-width: 80%; */
     position: relative;
     margin-bottom: 40px;
+}
+.border-div2{
+    margin: auto;
+    margin-top: 50px;
+    /* display: flex; */
+    width: 710px;
+    /* height: 398px; */
+    /* max-width: 80%; */
+    position: relative;
+    margin-bottom: 40px;
 
 }
+
 .border{
     top: 0px;
 
@@ -212,52 +202,55 @@ sup{
     z-index: 1;
     position: absolute;
 }
-@media screen and (max-width: 1000px){
-    #video-container{
-        display: none;
-    }
-    .border-div{
-        height: 663px;
-    }
-    .border{
-        top: 132px;
-        transform: scale(1.478, 2.32);
-    }
-}
-@media screen and (min-width: 1400px){
-    .border-div{
-        width: 1100px;
-        height:620px;
-    }
-    .text{
-        font-size: 30px;
-    }
-}
+
 .block-2{
     /* border: 1px white solid;
     backdrop-filter: blur(20px); */
+    margin: auto;
     margin-top: 250px;
     position: relative;
 }
+
 .border2{
     left: 20px;
     top: 0px;
+
+
     max-width: 100%;
     transform: scale(1.32, 1.4);
-
     z-index: 1;
     position: absolute;
 }
 .content_text{
-    padding: 10px, 20px,;
-    max-width: 100%;
-    display: flex;
+    position: relative;
+    z-index: 100;
+    overflow-y: scroll;
+    height: 400px;
+}
+.content_text::-webkit-scrollbar {
+    width: 12px; /* Ширина скроллбара */
+}
+
+.content_text::-webkit-scrollbar-track {
+    background: #f1f1f100; /* Цвет фона скроллбара */
+}
+.content_text::-webkit-scrollbar-thumb {
+    background: #fad9d900; /* Цвет ползунка */
+    border-radius: 6px; /* Скругленные углы ползунка */
+}
+.border-div:hover .content_text::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Цвет ползунка при наведении */
 }
 .paragraph2{
-    line-height: 32px;
-    font-size: large;
+    padding: 10px 15px 10px 25px;
+    color: white;
+    font-family: Reddit Mono;
+    line-height: 40px;
+    font-size: 25px;
 }
 .icon_pause{
+    z-index: 1000;
+    opacity: 0.4;
     color: wheat;
     font-size: calc(12*100%/3);
     position: fixed;
@@ -265,6 +258,121 @@ sup{
     right: 80px;
 }
 .icon_pause:hover{
+    opacity:1;
+
     cursor: pointer;
     color: #49acfe;
+}
+.autodesk{
+    color: #49acfe;
+}
+.maya{
+    color: aqua;
+}
+.max{
+    color: rgb(172, 11, 11);
+}
+.cinema{
+    color: rgb(19, 106, 109);
+}
+.brush{
+    color: burlywood;
+}
+.houdini{
+    color: tomato;
+}
+.sketch{
+    color: rgb(247, 178, 247);
+}
+.blender{
+    color: orangered;
+}
+.heightes{
+    height: 100%;
+}
+@media screen and (max-width: 600px) {
+    .content-for-text{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 840px) {
+    .border-div{
+        width: 100%;
+        height: 100%;
+    }
+    .block-1 > .background-video{
+        height: 240%;
+    }
+    .paragraph2{
+        background-color: rgba(0, 0, 0, 0.13);
+        padding: 0px;
+    }
+}
+/* @media screen and (max-width: 710px){
+    #alpha_video{
+        position: absolute;
+        width: 100%;
+    }
+} */
+@media screen and (min-width: 1000px){
+    
+}
+@media screen and (max-width: 1000px){
+
+    .icon_pause{
+        display: none;
+    }
+    .text > a{
+        padding-top: 24px;
+        padding-right: 6px;
+    }
+
+    .content_text{
+        height: auto;
+        overflow-y: visible;
+    }
+    .paragraph2{
+        border: 1px wheat solid;
+    }
+    .border2{
+        display: none;
+    }
+    .block-1 > .background-video{
+        height: 105%;
+    }
+
+    #video-container{
+        display: none;
+    }
+    .border-div{
+
+        border-radius: 20px;
+    }
+    .border{
+        top: 132px;
+        transform: scale(1.478, 2.32);
+    }
+}
+@media screen and (max-width: 1670px) {
+    .text>p{
+        margin: 0px;
+    }
+}
+@media screen and (min-width: 840px) and (max-width:1000px) {
+    .border-div{
+        height: 700px;
+    }
+}
+@media screen and (min-width: 1670px){
+    .content_text{
+        height: 650px;
+    }
+    .border-div{
+        width: 1100px;
+        height:620px;
+    }
+    .text{
+        font-size: 30px;
+    }
+    
 }

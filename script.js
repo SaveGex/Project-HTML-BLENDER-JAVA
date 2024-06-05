@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     const content = document.getElementById("content");
     const video = document.getElementById("video1");
     const alpha_video = document.getElementById("alpha_video");
-    alpha_video.playbackRate = 0.4;
+    alpha_video.playbackRate = 1;
     
     let play=false;
 
@@ -90,13 +90,29 @@ function adjustVideoSettings() {
     let div_col_12 = document.getElementById("remove_class");
     let content = document.getElementById("content");
     let content_for_text_width = content_for_text.offsetWidth;
-
+    let video_content = document.getElementById("video-container");
+    let del = false;
     // let content_for_text = document.getElementById("content-for-text");
 
 
-    let video_content = document.getElementById("video-container");
     
+    if(screen_width<840){
+        let del_div = document.getElementById("del_div");
+        del_div.classList.remove("border-div2");
+        del_div.classList.add("heightes")
+        del = true
+    }
+    else if(!del){
+        let del_div = document.getElementById("del_div");
+
+        del_div.classList.remove("heightes")
+
+        del_div.classList.add("border-div2")
+        del = false;
+    }
     if (screen_width < 1000) {
+        let video_alpha = document.getElementById("alpha_video");
+        video_alpha.play();
 
         content.classList.remove("col-3");
         div_col_12.classList.remove("video");
@@ -121,8 +137,6 @@ function adjustVideoSettings() {
         tag_video.classList.add("play_video")
         tag_video.removeAttribute("controls")
         tag_video.setAttribute("muted",'')
-        
-
     }
 
 }
@@ -130,20 +144,25 @@ function adjustVideoSettings() {
 let counter = 1;
 
 let icon_pause = document.getElementById("icon_pause");
+
 icon_pause.addEventListener("click", ()=>{
-    let videoElements = document.getElementsByTagName("video");
+    
+    let video_alpha = document.getElementById("alpha_video");
+    let idk_why_its_container = document.getElementById("video-container");
+    let idk_why_its_container2 = document.getElementById("video-container2")
 
     if(counter%2==1){
-        for(let i=0; i<videoElements.lenght; i++){
-            videoElements[i].pause();
-        }
-        counter++;    
+        video_alpha.pause();
+        idk_why_its_container.pause();
+        idk_why_its_container2.pause();
+
+        counter++;
     }
     else{
-        for(let i=0; i<videoElements.lenght; i++){
-            videoElements[i].play();
-        }
-
+        video_alpha.play();
+        idk_why_its_container.play();
+        idk_why_its_container2.play();
+        
         counter++;
     }
     console.log(counter);
